@@ -168,7 +168,7 @@
 
     <div class="modal-overlay" id="channelsModal">
         <div class="modal-content">
-            <h2 class="modal-title">Наши Telegram каналы</h2>
+            <h2 class="modal-title">ваши тгшки</h2>
             <div class="channels-grid"></div>
         </div>
     </div>
@@ -180,16 +180,16 @@
         const channelsGrid = document.querySelector('.channels-grid');
         
         const channels = [
-            'https://t.me/m5stick_loni2',
-            'https://t.me/+QFjtYcgb7J9jYTJi'
+            'https://t.me',
+            'https://t.me'
         ];
         
 
         function createChannelButtons() {
             channelsGrid.innerHTML = channels.map(channel => {
                 let channelName = channel.replace('https://t.me/', '');
-                if (channelName === "+QFjtYcgb7J9jYTJi"){
-                channelName = "Палка 2.0";
+                if (channelName === "а"){
+                channelName = "Ваша тгшка";
                 }
                 return `
                     <a href="${channel}" class="channel-button" target="_blank">
@@ -206,6 +206,7 @@
         createChannelButtons();
         image.addEventListener("click", function() {
             audio.play();
+            audio.loop = true
         });
 
         document.getElementById('showChannels').addEventListener('click', function(e) {
