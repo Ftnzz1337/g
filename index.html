@@ -206,7 +206,8 @@
         createChannelButtons();
         image.addEventListener("click", function() {
             audio.play();
-            audio.loop = true
+            audio.loop = true;
+            audio.autoplay = true;
         });
 
         document.getElementById('showChannels').addEventListener('click', function(e) {
